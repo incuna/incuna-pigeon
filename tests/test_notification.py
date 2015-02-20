@@ -9,20 +9,21 @@ class TestNotification(TestCase):
 
     def setUp(self):
         self.pigeon_handler = MagicMock()
-
-    def test_register_handler(self):
-        """A custom handler can be registered with the Notification class."""
-        Notification.register_handler(pigeon=self.pigeon_handler)
-        expected_handlers = {'pigeon': self.pigeon_handler}
-        self.assertEqual(Notification.handlers, expected_handlers)
+        self.user = 'Test User'
 
     def test_notify(self):
         """The notification uses each registered handler to notify a user."""
-        Notification.register_handler(pigeon=self.pigeon_handler)
+        class CustomNotification(Notification):
+            handlers = (self.pigeon_handler,)
 
-        user = 'Test User'
-        about = object()
-        notification = Notification(about=about)
-        notification.notify(user)
+        notification = CustomNotification(user=self.user)
+        notification.notify()
 
-        self.pigeon_handler.assert_called_once_with(about, user)
+        self.pigeon_handler.assert_called_once_with(notification)
+
+    def test_init(self):
+        """A notification stores information for the handlers to access."""
+        template = 'test_template.txt'
+        notification = Notification(user=self.user, template=template)
+        self.assertEqual(notification.user, self.user)
+        self.assertEqual(notification.template, template)
