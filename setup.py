@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 setup(
     name='incuna-pigeon',
 
-    version='0.0.0',
+    version='0.1.0',
 
     description='Notification management',
     url='https://github.com/incuna/incuna-pigeon',

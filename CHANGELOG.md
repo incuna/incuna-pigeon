@@ -1,3 +1,3 @@
-# 0.1.0 (Upcoming Release)
+# 0.1.0
 
 Add `Notification` class.
