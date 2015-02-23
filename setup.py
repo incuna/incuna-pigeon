@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 
 setup(
@@ -12,7 +12,7 @@ setup(
     author_email='admin@incuna.com',
     license='BSD',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Communications',
         'License :: OSI Approved :: BSD License',
@@ -23,4 +23,5 @@ setup(
 
     keywords='notifications',
     packages=find_packages(),
+    setup_requires=['wheel'],
 )
