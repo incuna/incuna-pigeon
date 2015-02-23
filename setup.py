@@ -12,7 +12,7 @@ setup(
     author_email='admin@incuna.com',
     license='BSD',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Communications',
         'License :: OSI Approved :: BSD License',
