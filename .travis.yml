@@ -2,7 +2,8 @@ language: python
 python:
   - 3.4
 script: 
-    - make test
+    - make test-coverage
+    - make coverage-report
     - flake8 .
 notifications:
   email: false
