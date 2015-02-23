@@ -5,5 +5,6 @@ script:
     - make test-coverage
     - make coverage-report
     - flake8 .
+    - make doctest
 notifications:
   email: false
