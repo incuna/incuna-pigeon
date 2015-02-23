@@ -23,4 +23,5 @@ setup(
 
     keywords='notifications',
     packages=find_packages(),
+    setup_requires=['wheel'],
 )
