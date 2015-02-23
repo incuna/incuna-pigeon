@@ -1,3 +1,6 @@
+release:
+	python setup.py register sdist bdist_wheel upload
+
 test-coverage:
 	@python -Wmodule -m coverage run -m unittest
 
