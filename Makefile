@@ -2,7 +2,7 @@ test-coverage:
 	@python -Wmodule -m coverage run -m unittest
 
 coverage-report:
-	@coverage report -m --fail-under 100
+	@coverage report --fail-under 100
 
 doctest:
 	@python -m doctest README.md
